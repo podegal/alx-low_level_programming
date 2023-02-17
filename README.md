@@ -1,2 +1,2 @@
 # alx-low_level_programming
-ALX-SE C tasks
+ALX-SE C programming tasks
