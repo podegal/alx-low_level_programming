@@ -10,7 +10,7 @@ int main(void)
 
 	int q;
 
-	for (q = 38; q <= 47; q++)
+	for (q = 38; q < 48; q++)
 	{
 		putchar(q);
 		if (q != 47)
