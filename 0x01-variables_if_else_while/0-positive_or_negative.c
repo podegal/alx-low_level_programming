@@ -4,9 +4,7 @@
 
 /**
 * main - print if the number is postive, zero, or negative
-*
-* Description: using the main function, this program prints "the number, followed by if it is  positive, zero, or negative"
-* Return: 0
+* Return: 0 (result)
 */
 int main(void)
 {
@@ -15,7 +13,7 @@ int n;
 
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-  
+/* code */  
 if (n > 0)
 {
 printf("%i is positive\n", n);
