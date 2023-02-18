@@ -1,19 +1,21 @@
 #include <stdio.h>
 /**
- * main - program that prints all possible combinations of single-digit numbers.
+ * main - program prints all possible combinations of single-digit numbers putting space and comma.
  *
  * Return: 0
  */
 int main(void)
 {
-int c;
-for (c = '0'; c <= '9'; c++)
+int b;
+
+for (b = 18; b <= 27; c++)
 {
-putchar(c);
-if (c != 8)
+putchar(b);
+if (b != 27)
 {
-putchar(',');
-putchar(' ');
+ putchar(',');
+ putchar(' ');
+}
 }
 putchar('\n');
 return (0);
