@@ -13,12 +13,10 @@ int main(void)
 
 	i = 0;
 
-	/* while (i < 10) 
-	{ 
-	      putchar(i);
-	}*/
-	//i++ is required after the putchar(i) curly braces to increment the value of i and avoid an infinite loop 
-
+	/*while (i < 10)*/
+	/*{*/
+	/*putchar(i);*/
+	/*}i++ should be put here to increment the value of i and avoid an infinite loop*/
 	printf("Infinite loop avoided! \\o/\n");
 
 	return (0);
