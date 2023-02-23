@@ -17,7 +17,6 @@ int main(void)
 	{ 
 	      putchar(i);
 	}*/
-
 	//i++ is required after the putchar(i) curly braces to increment the value of i and avoid an infinite loop 
 
 	printf("Infinite loop avoided! \\o/\n");
