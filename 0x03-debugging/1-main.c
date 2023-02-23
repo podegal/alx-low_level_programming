@@ -16,7 +16,7 @@ int main(void)
 	/*while (i < 10)*/
 	/*{*/
 	/*putchar(i);*/
-	/*}*//*i++ should be put after this curly braces to increment the value of i and avoid an infinite loop*/
+	/*}*/
 
 	printf("Infinite loop avoided! \\o/\n");
 
