@@ -19,12 +19,13 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	while (str[i] != '\0')
+	while (*(str + i))
 	{
-		i++;
+		len++, i++;
 	}
-	
-	duplicate_str = malloc(sizeof(char) * (len + 1));
+	len++;
+	duplicate_str = malloc(sizeof(char) * len);
+
 	if (duplicate_str == NULL)
 	{
 		return (NULL);
