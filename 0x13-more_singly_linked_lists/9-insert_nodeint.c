@@ -1,53 +1,41 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - insert a new node at a given position
- * @head: pointer to head pointer of linked list
- * @idx: index to insert new node
- * @n: new node's data
- * Return: address of new node, or NULL if failed
+ * insert_nodeint_at_index -  inserts a new node at a given position
+ * @head: double pointer to the linked list;
+ * @idx: index of the list where the new node should be added
+ * @n: node value
+ * Return: address of the new node, else, NULL
  */
-
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
+	listint_t *node = malloc(sizeof(listint_t));
+	listint_t *ptr = *head;
 
-	unsigned int j = 0;
-	listint_t *new_node, *tmp;
-
-	/* account for empty pointer */
-	if (head == NULL)
+	if (node == NULL)
 		return (NULL);
+	node->n = n;
+	node->next = NULL;
 
-	/* malloc and set values for new node */
-	new_node = malloc(sizeof(listint_t));
-	if (new_node == NULL)
-		return (NULL);
-	new_node->n = n;
-
-	/* account for idx 0 */
-	if (idx == 0)
+	if (*head == NULL)
+		*head = node;
+	else if (idx == 0)
 	{
-		new_node->next = *head;
-		*head = new_node;
-		return (new_node);
+		node->next = *head;
+		*head = node;
 	}
-
-	/* iterate to 1 before nth index to insert */
-	tmp = *head;
-	while (j < (idx - 1))
+	else if (idx > 0)
 	{
-		tmp = tmp->next;
-		j++;
-
-		if (tmp == NULL) /* account for idx out of range */
+		while (idx != 1)
 		{
-			free(new_node);
-			return (NULL);
+			if (ptr == NULL)
+				return (NULL);
+			ptr = ptr->next;
+			idx--;
 		}
+		node->next = ptr->next;
+		ptr->next = node;
 	}
 
-	/* link into list */
-	new_node->next = tmp->next;
-	tmp->next = new_node;
-	return (new_node);
+	return (node);
 }
