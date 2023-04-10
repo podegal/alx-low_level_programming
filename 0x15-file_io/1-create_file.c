@@ -1,18 +1,13 @@
 #include "main.h"
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
 
 /**
  * create_file - creates a file
- * @filename: filename.
- * @text_content: content writed in the file.
+ * @filename: name of file.
+ * @text: content writen in the file.
  *
- * Return: 1 if it success. -1 if it fails.
+ * Return: 1 on success, -1 on failure.
  */
-int create_file(const char *filename, char *text_content)
+int create_file(const char *filename, char *text)
 {
 	int fd;
 	int nletters;
@@ -26,13 +21,13 @@ int create_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 
-	if (!text_content)
-		text_content = "";
+	if (!text)
+		text = "";
 
-	for (nletters = 0; text_content[nletters]; nletters++)
+	for (nletters = 0; text[nletters]; nletters++)
 		;
 
-	rwr = write(fd, text_content, nletters);
+	rwr = write(fd, text, nletters);
 
 	if (rwr == -1)
 		return (-1);
