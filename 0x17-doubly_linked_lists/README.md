@@ -14,5 +14,5 @@ File Description:
 4-free_dlistint.c: Frees the memory allocated to a linked list.
 5-get_dnodeint.c: Returns the nth node of a linked list.
 6-sum_dlistint.c: Returns the sum of all the data (n) of a linked list.
-7-insert_dnodeint.c, 2-add_dnodeint.c, 3-add_dnodeint_end.c: Inserts a new node at a given position.
+7-insert_dnodeint.c: Inserts a new node at a given position.
 8-delete_dnodeint.c: Deletes the node at index index of a linked list.
